@@ -1,3 +1,11 @@
+/*
+ * Name: Matthew Britt
+ * Date: 4/2/2018
+ * Course Number: CSC-112
+ * Course Name: Intermediate Topics in Java Programming
+ * Email: msbritt0001@student.stcc.edu
+ * Using Javafx to make a Polygon that changes the number of sides
+ */
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

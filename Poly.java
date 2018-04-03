@@ -1,3 +1,11 @@
+/*
+ * Name: Matthew Britt
+ * Date: 4/2/2018
+ * Course Number: CSC-112
+ * Course Name: Intermediate Topics in Java Programming
+ * Email: msbritt0001@student.stcc.edu
+ * Using Javafx to make a Polygon that changes the number of sides
+ */
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -30,12 +38,12 @@ public class Poly extends BorderPane {
 		HBox hbox = new HBox();
 		Button addSide = new Button("+");
 		Button subtractSide = new Button("-");
-		addSide.setOnAction(e -> {
+		addSide.setOnAction(x -> {
 			int sides = Poly.getSides();
 			Poly.setSides(sides + 1);
 			this.paint();
 		});
-		subtractSide.setOnAction(e -> {
+		subtractSide.setOnAction(x -> {
 			int sides = Poly.getSides();
 			Poly.setSides(sides - 1);
 			this.paint();
