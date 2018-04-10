@@ -1,0 +1,44 @@
+package Exam;
+
+import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class TrafficLights extends Application {
+	public void start(Stage primarystage) {
+	Button red = new Button("Red");
+	Button yellow = new Button("Yellow");
+	Button green = new Button("Green");
+	
+	EventHandler eventHandler = e -> {
+		traffic.setLightRed();
+	};
+	
+	HBox hBox = new HBox(10.0);
+	hBox.setAlignment(Pos.CENTER);
+	hBox.setSpacing(10.0);
+	hBox.setPadding(new Insets(10.0, 0.0, 0.0, 0.0));
+	
+	hBox.getChildren().addAll((Node[]) new Node[] {red, yellow, green});
+	BorderPane borderpane = new BorderPane();
+	borderpane.setBottom((Node)hBox);
+	Scene scene = new Scene ((Parent)borderpane, 500, 400);
+	primarystage.setTitle("Traffic Lights Simulator");
+	primarystage.setScene(scene);
+	primarystage.setResizable(false);
+	primarystage.show();
+
+	}
+	
+	public static void main(String[]args) {
+		launch(args);
+	}
+}
